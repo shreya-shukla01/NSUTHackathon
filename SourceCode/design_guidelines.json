@@ -1,0 +1,124 @@
+{
+  "identity": {
+    "name": "IntentGuard",
+    "aesthetic": "Industrial Control Room",
+    "vibe": "High-Precision, Alert, Data-Dense, Dark Mode",
+    "archetype": "The Sentinel (Vigilant, Tech-Forward, Reliable)"
+  },
+  "typography": {
+    "primary_font": "Manrope",
+    "heading_font": "Chivo",
+    "mono_font": "JetBrains Mono",
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h2": "text-3xl font-semibold tracking-tight",
+      "h3": "text-2xl font-medium",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm text-muted-foreground",
+      "mono": "font-mono text-xs tracking-wide"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#09090b",
+      "surface": "#18181b",
+      "surface_highlight": "#27272a",
+      "border": "#27272a",
+      "primary": "#f59e0b",
+      "secondary": "#10b981",
+      "destructive": "#ef4444",
+      "info": "#3b82f6",
+      "text_primary": "#fafafa",
+      "text_secondary": "#a1a1aa"
+    },
+    "usage": {
+      "dashboard_bg": "bg-[#09090b]",
+      "card_bg": "bg-[#18181b]/50 backdrop-blur-md border border-white/10",
+      "status_safe": "text-emerald-500 bg-emerald-500/10 border-emerald-500/20",
+      "status_warning": "text-amber-500 bg-amber-500/10 border-amber-500/20",
+      "status_critical": "text-red-500 bg-red-500/10 border-red-500/20 animate-pulse",
+      "accent_glow": "shadow-[0_0_20px_rgba(245,158,11,0.15)]"
+    }
+  },
+  "layout_strategy": {
+    "grid_system": "Bento Grid (Mode B - Control Room)",
+    "spacing": "Compact but breathable (p-4 to p-6 for containers, gap-4 for grids)",
+    "containers": "Rounded-lg (0.5rem) or Rounded-none for strict industrial look. Border-collapse style for data grids.",
+    "z_index": {
+      "map": "z-0",
+      "overlays": "z-10",
+      "modals": "z-50",
+      "toasts": "z-100"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-amber-600 hover:bg-amber-500 text-white font-medium rounded-md shadow-[0_0_10px_rgba(245,158,11,0.2)] transition-all",
+      "secondary": "bg-zinc-800 hover:bg-zinc-700 text-zinc-100 border border-zinc-700",
+      "destructive": "bg-red-900/50 hover:bg-red-900/80 text-red-200 border border-red-800"
+    },
+    "cards": {
+      "default": "bg-zinc-900/80 border border-zinc-800/50 backdrop-blur-sm rounded-lg p-5",
+      "interactive": "hover:border-amber-500/30 transition-colors cursor-pointer"
+    },
+    "badges": {
+      "base": "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border",
+      "live": "bg-red-500/10 text-red-500 border-red-500/20 animate-pulse"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-black/40 border-white/5",
+    "gradients": "bg-gradient-to-b from-zinc-900 to-black",
+    "borders": "border border-white/5",
+    "shadows": "shadow-2xl shadow-black/50"
+  },
+  "motion": {
+    "transitions": "transition-all duration-200 ease-out",
+    "hover_effects": "hover:translate-y-[-2px] hover:shadow-lg",
+    "loading": "animate-spin text-amber-500"
+  },
+  "media": {
+    "image_urls": {
+      "drone_feed_main": "https://images.unsplash.com/photo-1715199281917-5e5b20d5c038?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxhZXJpYWwlMjByYWlsd2F5JTIwdHJhY2slMjBkcm9uZSUyMHZpZXd8ZW58MHx8fHwxNzY3NDM2NzQ2fDA&ixlib=rb-4.1.0&q=85",
+      "track_view_secondary": "https://images.unsplash.com/photo-1761926533844-b491601a83bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxhZXJpYWwlMjByYWlsd2F5JTIwdHJhY2slMjBkcm9uZSUyMHZpZXd8ZW58MHx8fHwxNzY3NDM2NzQ2fDA&ixlib=rb-4.1.0&q=85",
+      "operator_avatar": "https://images.unsplash.com/photo-1744853930655-52d02b83abb6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxyYWlsd2F5JTIwY29udHJvbCUyMHJvb20lMjBvcGVyYXRvcnxlbnwwfHx8fDE3Njc0MzY3NDl8MA&ixlib=rb-4.1.0&q=85"
+    },
+    "icons": "Lucide React (default) or Phosphor Icons (for technical feel)"
+  },
+  "libraries": {
+    "charts": "Recharts (via Shadcn Charts)",
+    "maps": "react-map-gl (Mapbox) or Leaflet for 2D fallback",
+    "3d": "React Three Fiber (for specific 3D object inspection if needed, otherwise Mapbox for terrain)",
+    "animations": "Framer Motion"
+  },
+  "instructions_to_main_agent": [
+    "Implement a strict Dark Mode by default. Do not create a light mode toggle unless requested.",
+    "Use the 'Bento Grid' layout for the main dashboard to organize dense data.",
+    "Prioritize 'Manrope' for UI text and 'JetBrains Mono' for all numerical data and sensor readings.",
+    "Use the provided image URLs for the Drone Feed and Digital Twin placeholders.",
+    "Ensure all alerts have a clear visual hierarchy (Red > Amber > Blue > Green).",
+    "Use 'sonner' for all system notifications.",
+    "Create a 'DigitalTwinViewer' component that acts as the centerpiece of the dashboard.",
+    "Mock real-time data updates using `setInterval` to simulate sensor fluctuations."
+  ],
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use sonner for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx"
+  ]
+}
